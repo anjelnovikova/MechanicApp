@@ -1,0 +1,48 @@
+﻿<Page x:Class="MechanicApp.Pages.MainManagerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:MechanicApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="MainManagerPage">
+
+    <Grid>
+        <StackPanel Margin="0,15,0,0" Orientation="Vertical">
+            <materialDesign:ColorZone
+                Height="70"
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="5">
+                <TextBlock
+                    x:Name="OrderAmountTB"
+                    Margin="5,0,0,0"
+                    VerticalAlignment="Center"
+                    FontSize="18"
+                    Text="Пользователи" />
+            </materialDesign:ColorZone>
+            <materialDesign:ColorZone
+                Height="250"
+                Margin="0,65,0,0"
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="5">
+                <StackPanel>
+                    <TextBlock
+                        Margin="5,0,0,0"
+                        FontSize="18"
+                        Text="Последние отзывы" />
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <WrapPanel
+                            x:Name="WrapPanelContainer"
+                            Margin="10"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top" />
+                    </ScrollViewer>
+                </StackPanel>
+            </materialDesign:ColorZone>
+        </StackPanel>
+    </Grid>
+</Page>

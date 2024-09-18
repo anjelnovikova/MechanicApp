@@ -1,0 +1,54 @@
+﻿<Page x:Class="MechanicApp.Pages.UsersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MechanicApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UsersPage"
+      Initialized="Page_Initialized">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Список пользователей" FontSize="36" />
+        <DataGrid Grid.Row="1" Name="UsersGrid" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True"/>
+        <UniformGrid Grid.Row="2" Rows="1" Columns="3">
+            <Button Width="160" Height="30" Name="SaveButton">
+                <materialDesign:PopupBox
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Content="aboba"
+                    FontSize="16"
+                    PopupMode="Click">
+                    <materialDesign:PopupBox.ToggleContent>
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                Width="20"
+                                Height="20"
+                                Foreground="White"
+                                Kind="ContentSave" />
+                            <TextBlock
+                                Margin="10,0,0,0"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Foreground="White"
+                                Text="Сохранить" />
+                        </StackPanel>
+                    </materialDesign:PopupBox.ToggleContent>
+                    <StackPanel>
+                        <Button x:Name="SaveAsPDF" Content="Сохранить в PDF" Click="SaveAsPdfButton_Click"/>
+                        <Button x:Name="SaveAsCSV" Content="Сохранить в CSV" Click="ExportToCsvButton_Click"/>
+                    </StackPanel>
+                </materialDesign:PopupBox>
+            </Button>
+            <Button Width="160" Height="30" Content="Изменить" Foreground="White" Click="Button_Click" Name="EditButton"/>
+            <Button Width="160" Height="30" Content="Добавить" Foreground="White" Name="AddButton" Click="AddButton_Click"/>
+        </UniformGrid>
+    </Grid>
+</Page>

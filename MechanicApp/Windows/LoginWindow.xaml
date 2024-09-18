@@ -1,0 +1,109 @@
+﻿<Window
+    x:Class="MechanicApp.Windows.LoginWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MechanicApp.Windows"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Система АвтоМеханик. Вход"
+    Width="486"
+    Height="450"
+    AllowsTransparency="True"
+    Background="Transparent"
+    FontFamily="{materialDesign:MaterialDesignFont}"
+    ResizeMode="NoResize"
+    Style="{StaticResource MaterialDesignWindow}"
+    TextElement.FontSize="14"
+    TextElement.FontWeight="Medium"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Border
+        Background="White"
+        BorderThickness="2"
+        CornerRadius="20">
+        <materialDesign:DialogHost Name="Host" CornerRadius="20">
+            <Grid x:Name="MainGrid">
+                <Button
+                    Width="45"
+                    Height="40"
+                    Margin="0,-1,0,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    BorderBrush="Transparent"
+                    Click="Button_Click_CloseWd"
+                    Content="X"
+                    FontSize="16"
+                    Foreground="White" />
+                <Button
+                    Width="45"
+                    Height="40"
+                    Margin="0,-1,50,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    BorderBrush="Transparent"
+                    Click="Button_Click_MinimizedWd"
+                    Content="-"
+                    FontSize="16"
+                    Foreground="White" />
+                <StackPanel>
+                    <TextBlock
+                        Width="185"
+                        Height="50"
+                        Margin="0,20,0,0"
+                        HorizontalAlignment="Center"
+                        FontSize="18"
+                        Text="Форма авторизации AutoMechanic"
+                        TextAlignment="Center"
+                        TextWrapping="Wrap" />
+                    <materialDesign:PackIcon
+                        Width="151"
+                        Height="140"
+                        HorizontalAlignment="Center"
+                        Kind="CarWrench" />
+                    <TextBox
+                        Name="loginTextBox"
+                        Width="260"
+                        Margin="0,20,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        materialDesign:HintAssist.Background="Transparent"
+                        materialDesign:HintAssist.FloatingHintHorizontalAlignment="Inherit"
+                        materialDesign:HintAssist.Foreground="Black"
+                        materialDesign:HintAssist.Hint="Логин"
+                        materialDesign:HintAssist.IsFloating="False"
+                        FontSize="14"
+                        Style="{DynamicResource MaterialDesignOutlinedTextBox}"
+                        Text="{Binding RelativeSource={RelativeSource Self}, Path=Tag}"
+                        TextWrapping="Wrap" />
+                    <PasswordBox
+                        Name="passwordBox"
+                        Width="260"
+                        Margin="0,20,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        materialDesign:HintAssist.Background="Transparent"
+                        materialDesign:HintAssist.FloatingHintHorizontalAlignment="Inherit"
+                        materialDesign:HintAssist.Foreground="Black"
+                        materialDesign:HintAssist.Hint="Пароль"
+                        materialDesign:HintAssist.IsFloating="False"
+                        materialDesign:PasswordBoxAssist.Password="{Binding RelativeSource={RelativeSource Self}, Path=Tag}"
+                        FontSize="14"
+                        Style="{DynamicResource MaterialDesignOutlinedRevealPasswordBox}" />
+                    <Button
+                        Name="btnAuth"
+                        Width="230"
+                        Height="45"
+                        Margin="0,30,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Click="LoginButton_Click"
+                        Content="Вход"
+                        Foreground="White" />
+                </StackPanel>
+            </Grid>
+        </materialDesign:DialogHost>
+    </Border>
+</Window>

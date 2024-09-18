@@ -1,0 +1,36 @@
+﻿<UserControl
+    x:Class="MechanicApp.Dialogs.AddEditTable"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MechanicApp.Dialogs"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="600"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid Background="White" Name="MainGrido">
+        <Button
+            Width="45"
+            Height="40"
+            Margin="558,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            BorderBrush="Transparent"
+            Content="X"
+            Click="CloseButtonClick"
+            FontSize="16"
+            Foreground="White" />
+        <UniformGrid
+            Name="UniGrid"
+            Margin="5,45,5,60"
+            Cursor="" />
+        <Button
+            Width="200"
+            Margin="0,0,0,10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Click="Button_Click"
+            Content="Сохранить"
+            Foreground="White" />
+    </Grid>
+</UserControl>

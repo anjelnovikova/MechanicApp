@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="MechanicApp.Dialogs.CaptchaDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MechanicApp.Dialogs"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:easy="clr-namespace:EasyCaptcha.Wpf;assembly=EasyCaptcha.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="350" Initialized="UserControl_Initialized">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10,20,10,20">
+            <easy:Captcha Height="50" Width="300" HorizontalAlignment="Stretch" Name="CaptchaImage"/>
+            <TextBox Height="50" Width="300" Name="CaptchaInput"></TextBox>
+            <UniformGrid Columns="2" Width="300">
+                <Button Content="Ввести капчу" Margin="10" Click="Button_Click"></Button>
+                <Button Content="{materialDesign:PackIcon Autorenew}" Margin="10" Click="Button_Click_1"></Button>
+            </UniformGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>

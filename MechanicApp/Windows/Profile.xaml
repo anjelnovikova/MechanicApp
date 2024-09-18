@@ -1,0 +1,117 @@
+﻿<Window
+    x:Class="MechanicApp.Windows.Profile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MechanicApp.Windows"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Profile"
+    Width="400"
+    Height="450"
+    AllowsTransparency="True"
+    FontFamily="{DynamicResource MaterialDesignFont}"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d" Background="{x:Null}" Initialized="Window_Initialized">
+    
+    <Border
+        Background="White"
+        BorderThickness="2"
+        CornerRadius="20">
+        <Grid>
+            <Button
+                Width="45"
+                Height="40"
+                Margin="0,-1,-1,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                BorderBrush="Transparent"
+                Click="Button_Click"
+                Content="X"
+                FontSize="16"
+                Foreground="White" />
+            <Button
+                Width="45"
+                Height="40"
+                Margin="0,-1,50,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                BorderBrush="Transparent"
+                Click="Button_Click_1"
+                Content="-"
+                FontSize="16"
+                Foreground="White" />
+            <StackPanel>
+                <materialDesign:ColorZone
+                    Width="140"
+                    Height="140"
+                    Margin="0,30,0,0"
+                    materialDesign:ElevationAssist.Elevation="Dp4"
+                    CornerRadius="10"
+                    Mode="PrimaryMid">
+                    <materialDesign:PackIcon
+                        Width="140"
+                        Height="140"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Kind="AccountCircle" Foreground="White" />
+                </materialDesign:ColorZone>
+                <Border
+                    Width="260"
+                    Margin="0,20,0,0"
+                    BorderBrush="#FF5F5F5F"
+                    BorderThickness="2"
+                    CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="20"
+                            Text="ФИО:" />
+                        <TextBlock
+                            Name="Sname"
+                            Margin="0,10,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="20"
+                            Text="Фамилия"
+                            TextDecorations="Underline" />
+                        <TextBlock
+                            Name="Fname"
+                            Margin="0,10,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="20"
+                            Text="Имя"
+                            TextDecorations="Underline" />
+                        <TextBlock
+                            Name="Tname"
+                            Margin="0,10,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="20"
+                            Text="Отчество"
+                            TextDecorations="Underline" />
+                        <TextBlock
+                            Name="UserType"
+                            Margin="0,10,0,6"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="20"
+                            Text="Тип пользователя"
+                            TextDecorations="Underline" />
+                    </StackPanel>
+                </Border>
+                <Button
+                    Width="130"
+                    Margin="0,15,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Content="Выход"
+                    Foreground="White" Click="Button_Click_2" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

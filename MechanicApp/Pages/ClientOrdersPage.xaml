@@ -1,0 +1,25 @@
+﻿<Page x:Class="MechanicApp.Pages.ClientOrdersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MechanicApp.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ClientOrdersPage"
+      Initialized="Page_Initialized">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Список заказов" FontSize="36" />
+        <DataGrid Grid.Row="1" Name="OrdersGrid" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True"/>
+        <UniformGrid Grid.Row="2" Rows="1" Columns="1">
+            <Button Height="30" Content="Создать новый заказ" Foreground="White" Click="Button_Click" Name="EditButton" Width="250"/>
+        </UniformGrid>
+    </Grid>
+</Page>
